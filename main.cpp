@@ -5,7 +5,7 @@ void Display(int StartX, int StartY, COLORREF WordColor = BLUE, COLORREF Backgro
 int main()
 {
     initgraph(WIDTH, HEIGHT);
-    Display(30, 10, YELLOW);
+    Display(30, 10);
     //system("pause");
     return 0;
 }
@@ -18,6 +18,7 @@ void Display(int StartX, int StartY, COLORREF WordColor, COLORREF BackgroundColo
         setfillcolor(BackgroundColor);
         bar(0, 0, WIDTH, HEIGHT);
         setfillcolor(WordColor);
+        setcolor(WordColor);
         drawTime(StartX, StartY);
         Sleep(995);
         cleardevice();
